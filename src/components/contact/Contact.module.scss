@@ -1,0 +1,143 @@
+@media screen and (min-width: 375px) {
+    .item {
+      margin-left: 50px;
+      width: 250px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 5px;
+      background-color: #f9f9f9;
+    }
+    
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    
+    .my-icon {
+      margin-right: 5px;
+    }
+    
+    .info {
+      margin-left: 5px;
+      font-size: 14px;
+    }
+    
+    .btn {
+      width: 60px;
+      height: 30px;
+      display: block;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .btn:hover {
+      background-color: #c82333;
+    }
+    }
+  
+  @media screen and (min-width: 768px) {
+    .item {
+      width: 350px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 15px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9;
+      margin: 0 auto;
+    }
+    
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    
+    .my-icon {
+      margin-right: 10px;
+    }
+    
+    .info {
+      margin-left: 20px;
+      font-size: 18px;
+    }
+    
+    .btn {
+      width: 100px;
+      height: 30px;
+      display: block;
+      background-color: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    
+    .btn:hover {
+      background-color: #c82333;
+    }
+    }
+  
+  
+  @media screen and (min-width: 1158px){
+  .item {
+    width: 580px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+  }
+  
+  .icon-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .my-icon {
+    margin-right: 10px;
+  }
+  
+  .info {
+    margin-left: 20px;
+    font-size: 24px;
+  }
+  
+  .btn {
+    width: 150px;
+    height: 40px;
+    display: block;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: #c82333;
+  }
+  }

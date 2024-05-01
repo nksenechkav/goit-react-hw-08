@@ -1,0 +1,66 @@
+@media screen and (min-width: 375px){ 
+    .searchBox {
+        width: 250px;
+        // margin-top: 30px;
+        margin-bottom: 10px;
+        margin-left: 50px;
+      }
+      
+      .label {
+        color: black;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .searchField {
+        width: 245px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+  
+  @media screen and (min-width: 768px){ 
+    .searchBox {
+        margin-left: 200px;
+        width: 370px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+      }
+      
+      .label {
+        color:black;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      
+      .searchField {
+        width: 365px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    }
+  
+  @media screen and (min-width: 1158px){ 
+  .searchBox {
+      margin-left: 270px;
+      width: 640px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    
+    .label {
+      color: black;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    .searchField {
+      width: 600px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+    
