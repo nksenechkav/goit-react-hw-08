@@ -14,3 +14,4 @@ export const selectFilteredContacts = createSelector([selectContacts, selectName
            contact.name.toLowerCase().includes(filter)
     );
 });
+
