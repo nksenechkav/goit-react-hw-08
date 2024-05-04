@@ -1,10 +1,12 @@
+import css from './Layout.module.scss';
 import { Suspense } from 'react';
-// import { Outlet } from 'react-router-dom';
-import { AppBar } from './appBar/AppBar';
+import { AppBar } from '../appBar/AppBar';
+
 
 export const Layout = ({ children }) => {
   return (
-    <div style={{ maxWidth: 960, margin: '0 auto', padding: '0 16px' }}>
+    <div className={css["phonebook-container"]}>
+    <h1>Phonebook</h1>
       <AppBar />
       <Suspense fallback={null}>{children}</Suspense>
     </div>
