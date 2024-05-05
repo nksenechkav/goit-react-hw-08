@@ -7,4 +7,20 @@
   .username {
     font-weight: 700;
   }
+
+  .btn {
+    width: 100px;
+    height: 40px;
+    display: block;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+  }
   
+  .btn:hover {
+    background-color: #c82333;
+  }

@@ -1,7 +1,6 @@
 @media screen and (min-width: 375px) {
   .header {
-    max-width: 375px;
-    // padding-left: 600px;
+    max-width: 200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -12,9 +11,8 @@
     }
   @media screen and (min-width: 768px) {
     .header {
-      max-width: 768px;
+      max-width: 400px;
       margin: 0 auto;
-      // padding-left: 240px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -25,10 +23,9 @@
   
   @media screen and (min-width: 1158px){
   .header {
-    max-width: 920px;
+    font-size: 18px;
+    max-width: 600px;
     margin: 0 auto;
-    padding-left: 135px;
-    padding-right: 160px;
     display: flex;
     justify-content: space-between;
     align-items: center;
