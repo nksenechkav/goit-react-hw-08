@@ -1,19 +1,21 @@
 @media screen and (min-width: 375px){ 
   .searchBox {
-      width: 250px;
-      // margin-top: 30px;
-      margin-bottom: 10px;
-      margin-left: 50px;
+      width: 230px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 70px;
     }
     
     .label {
+      font-size: 12px;
       color: black;
       font-weight: bold;
       margin-bottom: 5px;
     }
     
     .searchField {
-      width: 245px;
+      font-size: 12px;
+      width: 230px;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 5px;
@@ -22,10 +24,10 @@
 
 @media screen and (min-width: 768px){ 
   .searchBox {
-      margin-left: 200px;
-      width: 370px;
-      margin-top: 50px;
-      margin-bottom: 20px;
+      margin-left: 185px;
+      width: 400px;
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
     
     .label {
@@ -35,7 +37,7 @@
     }
     
     .searchField {
-      width: 365px;
+      width: 400px;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 5px;

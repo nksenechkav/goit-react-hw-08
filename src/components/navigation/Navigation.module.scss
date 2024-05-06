@@ -1,4 +1,8 @@
   @media screen and (min-width: 375px){ 
+    .navigation {
+      display: flex;
+      flex-direction: column;
+    }
     .link {
       display: inline-block;
       text-decoration: none;
@@ -18,6 +22,12 @@
   }
   
   @media screen and (min-width: 768px){ 
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
     .link {
       display: inline-block;
       text-decoration: none;
@@ -37,6 +47,11 @@
   }
    
    @media screen and (min-width: 1158px){ 
+    .navigation {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
       .link {
         display: inline-block;
         text-decoration: none;

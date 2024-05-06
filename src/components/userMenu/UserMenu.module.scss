@@ -1,4 +1,67 @@
-.wrapper {
+@media screen and (min-width: 375px){ 
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .username {
+    font-weight: 700;
+  }
+
+  .btn {
+    width: 60px;
+    height: 30px;
+    display: block;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  
+  .btn:hover {
+    background-color: #c82333;
+  }
+  }
+
+@media screen and (min-width: 768px){ 
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .username {
+    font-weight: 700;
+  }
+
+  .btn {
+    width: 70px;
+    height: 30px;
+    display: block;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn:hover {
+    background-color: #c82333;
+  }
+  }
+
+@media screen and (min-width: 1158px){ 
+  .wrapper {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -23,4 +86,5 @@
   
   .btn:hover {
     background-color: #c82333;
+  }
   }

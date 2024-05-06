@@ -1,7 +1,7 @@
 @media screen and (min-width: 375px) {
   .item {
     margin-left: 50px;
-    width: 250px;
+    width: 230px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -24,7 +24,7 @@
   
   .info {
     margin-left: 5px;
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .btn {
@@ -37,7 +37,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 12px;
   }
   
   .btn:hover {
@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 768px) {
   .item {
-    width: 350px;
+    width: 400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

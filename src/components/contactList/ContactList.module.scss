@@ -1,8 +1,9 @@
 @media screen and (min-width: 375px){ 
   .contact-list {
-  width: 320px;
+  width: 290px;
+  margin-left: 20px;
   list-style-type: none;
-  height: 230px;
+  height: 70px;
   overflow: hidden;
   overflow-y: scroll;
   display: flex;
@@ -14,10 +15,10 @@
 
 @media screen and (min-width: 768px){ 
   .contact-list {
-  width: 400px;
-  margin-left: 190px;
+  width: 440px;
+  margin-left: 165px;
   list-style-type: none;
-  height: 530px;
+  height: 500px;
   overflow: hidden;
   overflow-y: scroll;
   display: flex;
