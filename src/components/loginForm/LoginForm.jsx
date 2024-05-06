@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import { logIn } from '../../redux/auth/operations';
+import toast, { Toaster } from 'react-hot-toast';
 import css from './LoginForm.module.scss';
 
 const FeedbackSchema = Yup.object().shape({
@@ -18,7 +19,6 @@ const FeedbackSchema = Yup.object().shape({
   .matches(/^(?=.*[a-zA-Z])(?=.*\d).{5,}$/, 'Password must contain at least one letter, one digit, and be at least 5 characters long')
   .required("Required")
   .test('is-valid-password', 'Must be a valid password!', function (value) {
-    // Ваша логіка перевірки дійсності пароля
     return /^(?=.*[a-zA-Z])(?=.*\d).{5,}$/.test(value);
   })
 });
@@ -38,10 +38,10 @@ export const LoginForm = () => {
     )
       .unwrap()
       .then(() => {
-        console.log('login success');
+        toast.success('Login success. Congratulations!');
       })
       .catch(() => {
-        console.log('login error');
+        toast.error('Login failed. Please check your credentials!');
       });
       actions.resetForm();
   };
@@ -60,17 +60,17 @@ export const LoginForm = () => {
     <div className={css["form-wrapper"]}>
       <label className={css.label} htmlFor={emailFieldId}>Email</label>
       <Field className={css.field} type="email" name="email" id={emailFieldId} placeholder='Enter your email...'/>
-      <ErrorMessage name="name" component="p" className={css.error} />
+      <ErrorMessage name="email" component="p" className={css.error} />
     </div> 
 
     <div className={css["form-wrapper"]}>
       <label className={css.label} htmlFor={passwordFieldId}>Password</label>
       <Field className={css.field} type="password" name="password" id={passwordFieldId} placeholder='Enter your password...'/>
-      <ErrorMessage name="name" component="p" className={css.error} />
+      <ErrorMessage name="password" component="p" className={css.error} />
     </div>
 
       <button className={css.btn} type="submit">Log In</button>
-
+      <Toaster />
     </Form>
   </Formik>
   );

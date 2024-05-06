@@ -10,7 +10,7 @@ const FeedbackSchema = Yup.object().shape({
   name: Yup.string() .trim()
   .matches(/^[A-Za-z\s]+$/, 'Must contain only letters')
   .required("Required")
-  .test('is-valid-name', 'Must be in the format "First Last"', function (value) {
+  .test('is-valid-name', 'Must be in the format "First Name and Last Name"', function (value) {
     return /^[A-Za-z]+\s[A-Za-z]+$/.test(value);
   }),
 

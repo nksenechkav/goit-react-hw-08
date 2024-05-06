@@ -4,7 +4,8 @@ import * as Yup from "yup";
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
-import css from './RegisterForm.module.scss';
+import toast, { Toaster } from 'react-hot-toast';
+import css from './RegistrationForm.module.scss';
 
 const FeedbackSchema = Yup.object().shape({
   email: Yup.string().trim()
@@ -18,12 +19,11 @@ const FeedbackSchema = Yup.object().shape({
   .matches(/^(?=.*[a-zA-Z])(?=.*\d).{5,}$/, 'Password must contain at least one letter, one digit, and be at least 5 characters long')
   .required("Required")
   .test('is-valid-password', 'Must be a valid password!', function (value) {
-    // Ваша логіка перевірки дійсності пароля
     return /^(?=.*[a-zA-Z])(?=.*\d).{5,}$/.test(value);
   })
 });
 
-export const RegisterForm = () => {
+export const RegistrationForm = () => {
   const dispatch = useDispatch();
   const nameFieldId = useId();
   const emailFieldId = useId();
@@ -40,10 +40,10 @@ export const RegisterForm = () => {
     )
       .unwrap()
       .then(() => {
-        console.log('login success');
+        toast.success('Registration success. Congratulations!');
       })
       .catch(() => {
-        console.log('login error');
+        toast.error('Registration failed. Please check your credentials!');
       });
       actions.resetForm();
   };
@@ -68,58 +68,18 @@ export const RegisterForm = () => {
     <div className={css["form-wrapper"]}>
       <label className={css.label} htmlFor={emailFieldId}>Email</label>
       <Field className={css.field} type="email" name="email" id={emailFieldId} placeholder='Enter your email...'/>
-      <ErrorMessage name="name" component="p" className={css.error} />
+      <ErrorMessage name="email" component="p" className={css.error} />
     </div> 
 
     <div className={css["form-wrapper"]}>
       <label className={css.label} htmlFor={passwordFieldId}>Password</label>
       <Field className={css.field} type="password" name="password" id={passwordFieldId} placeholder='Enter your password...'/>
-      <ErrorMessage name="name" component="p" className={css.error} />
+      <ErrorMessage name="password" component="p" className={css.error} />
     </div>
 
       <button className={css.btn} type="submit">Register</button>
-
+      <Toaster />
     </Form>
   </Formik>
   );
 };
-
-
-
-
-// export const RegisterForm = () => {
-//   const dispatch = useDispatch();
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     const form = e.target;
-
-//     dispatch(
-//       register({
-//         name: form.elements.name.value,
-//         email: form.elements.email.value,
-//         password: form.elements.password.value,
-//       })
-//     );
-
-//     form.reset();
-//   };
-
-//   return (
-//     <form className={css.form} onSubmit={handleSubmit} autoComplete="off">
-//       <label className={css.label}>
-//         Username
-//         <input type="text" name="name" />
-//       </label>
-//       <label className={css.label}>
-//         Email
-//         <input type="email" name="email" />
-//       </label>
-//       <label className={css.label}>
-//         Password
-//         <input type="password" name="password" />
-//       </label>
-//       <button type="submit">Register</button>
-//     </form>
-//   );
-// };
